@@ -1,0 +1,46 @@
+<!doctype html><html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!--<script src="js/datepicker-ru.js"></script>-->
+    <script src="js/moment.min.js"></script>
+    <script src="js/datepicker-ru.js"></script>
+    <script src="js/jquery.comiseo.daterangepicker.min.js"></script>
+    <script src="js/missed.js"></script>
+
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery.comiseo.daterangepicker.min.css">
+    <link rel="stylesheet" href="css/missed.css">
+
+</head>
+<body>
+<div id="settings">
+    <a href="#" data-modal="settings">Настройки</a>
+</div>
+<div class="head">
+    <div class="inner">
+        <h1><span id="titleSpan">Пропущенные звонки</span> <input value='{"start":"2019-01-02","end":"2019-01-02"}' type="text"/><span id="clrDate" class="date">Выберете дату</span></h1>
+    <h2 id="data-day">дата</h2>
+    </div>
+</div>
+<div id="lstmissCalls_wrapper" data-date-start="2019-01-02" data-date-end="2019-01-02"></div>
+<div id="lstCalls_wrapper" data-date-start="2019-01-02" data-date-end="2019-01-02"></div>
+
+<div class="popup" id="popup-settings">
+    <div class="window">
+            <div class="inner">
+                <label>Описания входящих номеров:</label>
+                <div class="table-auto-fields" id="descList">
+                    <div class="line">
+                        <input name="in_phone[number][]" id="inp_number" placeholder="Введите номер" type="text"/><input name="in_phone[description][]" id="inp_desc" placeholder="Введите описание" type="text"/>
+                    </div>
+            </div>
+            <div class="buttons">
+                <button type="button" class="btn-cancel">Отменить</button>
+                <button class="btn-save" onclick="saveDesc()" type="submit">Сохранить</button>
+            </div>
+    </div>
+</div>
+
+</body>
+</html>

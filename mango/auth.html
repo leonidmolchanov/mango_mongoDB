@@ -1,0 +1,35 @@
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script>
+    $(function() {
+        $('form input:first').focus();
+    })
+</script>
+<style>
+    body {
+        font-family:Arial;
+        font-size:14px;;
+    }
+    form {
+        margin: 200px auto 0 auto;
+        width: 300px;
+    }
+    form input {
+        box-sizing: border-box;
+        width:60%;
+        padding:4px 8px;
+        margin: 5px auto;
+        display: block;
+    }
+    form button {
+        display: block;
+        margin: 5px auto;
+        box-sizing: border-box;
+        width:60%;
+        padding:4px 8px;
+    }
+</style>
+<form action="/" method="get">
+    <input placeholder="Логин" required="required" type="text" name="login"/>
+    <input placeholder="Пароль" required="required" type="password" name="password"/>
+    <button>Войти</button>
+</form>
